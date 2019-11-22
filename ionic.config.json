@@ -1,5 +1,7 @@
 {
   "name": "iontestafid",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

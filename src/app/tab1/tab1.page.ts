@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,21 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private authService:AuthService) {}
 
+  isAuthenticated(){
+    return this.authService.isAuthenticated();
+  }
+ 
+
+  isAdmin() {
+    return this.authService.isAdmin();
+  }
+  logout(){
+    return this.authService.logout();
+  }
+
+  isUser() {
+    return this.authService.isUser();
+  }
 }
